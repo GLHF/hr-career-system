@@ -102,7 +102,7 @@ public class HrServiceImpl implements HrService {
             "    ORDER BY skill_id) as pos_data" +
             "    GROUP BY position, employee, pos_scale, emp_scale, skill_id" +
             ")" +
-            "SELECT qualified.position," +
+            "SELECT qualified.employee," +
             "       COALESCE(qualified.qualified, 0)         as qualified," +
             "       COALESCE(overqualified.overqualified, 0) as overqualified" +
             " FROM ((SELECT position                                   as position," +
